@@ -32,7 +32,11 @@ var x = setInterval(function() {
 document.getElementById("buka").onclick = function() {
   document.body.classList.remove('stop-scrol');
 }
-
+$('div.pembuka').hide();
+$('.banner.layer-1 button').click(function(event) {
+    event.preventDefault();
+    $(this).next('div.pembuka').slideToggle(200);
+});
 
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
@@ -53,10 +57,10 @@ var swiper = new Swiper(".slide-content", {
 
   breakpoints:{
       0: {
-          slidesPerView: 3,
+          slidesPerView: 1,
       },
       520: {
-          slidesPerView: 3,
+          slidesPerView: 2,
       },
       950: {
           slidesPerView: 3,

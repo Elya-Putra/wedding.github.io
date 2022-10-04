@@ -6,10 +6,11 @@
   transition: all 0.2s linear;
 }
 
-/*.stop-scrol{
-    overflow: hidden;
-    height: 100%;
-}*/
+.stop-scrol {
+  overflow: hidden;
+  height: 100%;
+}
+
 .banner {
   position: relative;
   padding: 0;
@@ -68,7 +69,7 @@
   font-weight: 600;
   text-transform: uppercase;
 }
-.banner .layer-1 .overlay a .btn {
+.banner .layer-1 .overlay .btn {
   font-family: "Roboto Slab";
   margin-top: 20px;
   color: #FFF;
@@ -77,7 +78,7 @@
   transition: all 0.5s;
   border-radius: 20px;
 }
-.banner .layer-1 .overlay a .btn:hover {
+.banner .layer-1 .overlay .btn:hover {
   background-color: #472D2D;
   transform: scale(1.2);
 }
@@ -88,9 +89,22 @@
 .audio a {
   float: right;
 }
+@media (max-width: 767.98px) {
+  .audio a {
+    margin-right: 50px;
+  }
+}
 .audio a img {
-  width: 2%;
+  width: 3%;
   position: absolute;
+  background-color: #A77979;
+  border-radius: 50%;
+  padding: 10px;
+}
+@media (max-width: 767.98px) {
+  .audio a img {
+    width: 7%;
+  }
 }
 
 .isi .pembuka {
@@ -477,6 +491,11 @@
   margin: 0 40px;
   overflow: hidden;
 }
+@media (max-width: 575.98px) {
+  .slide-container .slide-content {
+    margin: 0 20px;
+  }
+}
 .slide-container .slide-content .card-wrapper .card {
   border: none;
   -webkit-animation: slide 18s infinite;
@@ -545,6 +564,11 @@
 .slide-container .slide-content .card-wrapper .card .galery-1 img:hover {
   transform: scale(1.1);
 }
+@media (max-width: 575.98px) {
+  .slide-container .slide-content .card-wrapper .card .galery-1 img {
+    padding: 0;
+  }
+}
 .slide-container .slide-content .card-wrapper .card .galery-2 img {
   padding: 10px;
   width: 100%;
@@ -556,28 +580,10 @@
 .slide-container .slide-content .card-wrapper .card .galery-2 img:hover {
   transform: scale(1.1);
 }
-.slide-container .slide-content .card-wrapper .card .galery-2 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  text-align: center;
-  padding: 80px 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.slide-container .slide-content .card-wrapper .card .galery-2 .overlay:target {
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
-}
-.slide-container .slide-content .card-wrapper .card .galery-2 .overlay img {
-  width: 500px;
-  height: 500px;
-  margin: auto;
+@media (max-width: 575.98px) {
+  .slide-container .slide-content .card-wrapper .card .galery-2 img {
+    padding: 0;
+  }
 }
 
 .ucapan .input {
@@ -611,6 +617,7 @@
   width: 50%;
   border-radius: 20px;
   background-color: rgba(112, 79, 79, 0.3);
+  box-shadow: 0px 0px 24px rgba(112, 79, 79, 0.3);
   padding: 20px;
 }
 @media (max-width: 991.98px) {
@@ -696,7 +703,15 @@
 }
 .ucapan-doa .ucapan .box {
   width: 60%;
+  height: 300px;
+  overflow-y: scroll;
   margin: auto;
+  border: 1px solid #A77979;
+  border-radius: 20px;
+  background-color: rgba(112, 79, 79, 0.2);
+  margin-top: 10px;
+  box-shadow: 0px 0px 24px rgba(112, 79, 79, 0.3);
+  padding: 10px;
 }
 @media (max-width: 991.98px) {
   .ucapan-doa .ucapan .box {
@@ -720,7 +735,7 @@
   font-family: "Roboto Slab";
   font-size: 16px;
   padding: 8px 25px;
-  background-color: rgba(112, 79, 79, 0.3);
+  background-color: rgba(112, 79, 79, 0.7);
   border-radius: 10px;
   color: #FFF;
 }
@@ -771,7 +786,7 @@
   margin: 8px;
 }
 .footer .penutup .medsos .fa-brands:hover {
-  transform: scale(1.2F);
+  transform: scale(1.2);
 }
 .footer .penutup h2 {
   font-family: "Roboto Slab";

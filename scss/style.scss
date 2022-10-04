@@ -11,10 +11,10 @@ $color5: #FFF;
     padding: 0;font-family: 'Dancing Script';
     transition:all .2s linear;
 }
-/*.stop-scrol{
+.stop-scrol{
     overflow: hidden;
     height: 100%;
-}*/
+}
 
 .banner{
     position: relative;
@@ -68,19 +68,17 @@ $color5: #FFF;
                 font-weight: 600;
                 text-transform: uppercase;
             }
-            a{
-                .btn{
-                    font-family: 'Roboto Slab';
-                    margin-top: 20px;
-                    color: $color5;
-                    padding: 8px 25px;
-                    background-color: $color3;
-                    transition: all .5s;
-                    border-radius: 20px;
-                    &:hover{
-                        background-color: $color1;
-                        transform: scale(1.2);
-                    }
+            .btn{
+                font-family: 'Roboto Slab';
+                margin-top: 20px;
+                color: $color5;
+                padding: 8px 25px;
+                background-color: $color3;
+                transition: all .5s;
+                border-radius: 20px;
+                &:hover{
+                    background-color: $color1;
+                    transform: scale(1.2);
                 }
             }
         }
@@ -90,9 +88,18 @@ $color5: #FFF;
     overflow: hidden;
     a{
     float: right;
+    @media (max-width: 767.98px) {
+        margin-right: 50px;
+    }
         img{
-            width: 2%;
+            width: 3%;
             position: absolute;
+            background-color: $color4;
+            border-radius: 50%;
+            padding: 10px;
+            @media (max-width: 767.98px) {
+                width: 7%;
+            }
         }
     }
 }
@@ -444,6 +451,9 @@ $color5: #FFF;
     .slide-content{
         margin: 0 40px;
         overflow: hidden;
+        @media (max-width: 575.98px) {
+            margin: 0 20px;
+        }
         .card-wrapper{
             .card{
                 border: none;
@@ -484,6 +494,9 @@ $color5: #FFF;
                         &:hover{
                             transform: scale(1.1);
                         }
+                        @media (max-width: 575.98px) {
+                            padding: 0;
+                        }
                     }
                 }
                 .galery-2{
@@ -496,29 +509,8 @@ $color5: #FFF;
                         &:hover{
                             transform: scale(1.1);
                         }
-                    }
-                    .overlay{
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        background-color: rgb(0, 0, 0, .8);
-                        z-index: 100;
-                        text-align: center;
-                        padding: 80px 0;
-                        width: 0;
-                        height: 0;
-                        overflow: hidden;
-        
-                        &:target{
-                            right: 0;
-                            bottom: 0;
-                            width: auto;
-                            height: auto;
-                        }
-                        img{
-                            width: 500px;
-                            height: 500px;
-                            margin: auto;
+                        @media (max-width: 575.98px) {
+                            padding: 0;
                         }
                     }
                 }
@@ -554,6 +546,7 @@ $color5: #FFF;
             width: 50%;
             border-radius: 20px;
             background-color: rgba(112, 79, 79, .3);
+            box-shadow: 0px 0px 24px rgba(112, 79, 79, .3);
             padding: 20px;
             @media (max-width: 991.98px) {
                 width: 90%;
@@ -633,7 +626,15 @@ $color5: #FFF;
         }
         .box{
             width: 60%;
+            height: 300px;
+            overflow-y: scroll;
             margin: auto;
+            border: 1px solid $color4;
+            border-radius: 20px;
+            background-color: rgba(112, 79, 79, .2);
+            margin-top: 10px;
+            box-shadow: 0px 0px 24px rgba(112, 79, 79, .3);
+            padding: 10px;
             @media (max-width: 991.98px) {
                 width: 90%;
             }
@@ -656,7 +657,7 @@ $color5: #FFF;
                     font-family: 'Roboto Slab';
                     font-size: 16px;
                     padding: 8px 25px;
-                    background-color: rgba(112, 79, 79, .3);
+                    background-color: rgba(112, 79, 79, .7);
                     border-radius: 10px;
                     color: $color5;
                 }
@@ -711,7 +712,7 @@ $color5: #FFF;
             .fa-brands{
                 margin: 8px;
                 &:hover{
-                    transform: scale(1.2F);
+                    transform: scale(1.2);
                 }
             }
         }

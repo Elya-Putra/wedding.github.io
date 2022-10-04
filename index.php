@@ -39,7 +39,7 @@ if (!isset($_SESSION['username'])) {
                     echo "<h3>$_GET[penerima]</h3>";
                     }
                   ?>
-            <a href="#isi"><button class="btn" id="buka">Buka Undangan</button></a>
+            <button class="btn" id="buka">Buka Undangan</button>
           </form>
         </div>
       </div>
@@ -324,10 +324,10 @@ if (!isset($_SESSION['username'])) {
           $kehadiran = ($_POST['kehadiran']);
 
 
-          $cek = mysqli_query($conn, "SELECT nama FROM ucapan_doa WHERE nama='". $nama ."' ");
+          $cek = mysqli_query($conn, "SELECT nama FROM ucapan WHERE nama='". $nama ."' ");
 
           if(mysqli_num_rows($cek)>0){
-            echo '<div class="alert alert-error">coba nama lain</div>';
+            echo "<script>alert('Masukan Nnama Lain')</script>";
           }else{
 
             $simpan	= mysqli_query($conn, "INSERT INTO ucapan (nama, ucapan, kehadiran) VALUES ('".$nama."', '".$ucapan."', '".$kehadiran."')");
@@ -335,11 +335,9 @@ if (!isset($_SESSION['username'])) {
             if($simpan){
                       echo "<script>alert('Berhasil Disimpan')</script>";
             }else {
-                      echo '<div class="alert alert-gagal">Gagal Simpan</div>';
+                      echo "<script>alert('Gagal Simpan')</script>";
             }
           }
-
-                  
 
         }
       ?>
