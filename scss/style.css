@@ -6,11 +6,10 @@
   transition: all 0.2s linear;
 }
 
-.stop-scrol {
-  overflow: hidden;
-  height: 100%;
-}
-
+/*.stop-scrol{
+    overflow: hidden;
+    height: 100%;
+}*/
 .banner {
   position: relative;
   padding: 0;
@@ -20,6 +19,7 @@
   background-image: url(../img/foto-3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .banner .layer-1::before {
   content: "";

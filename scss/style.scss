@@ -11,10 +11,10 @@ $color5: #FFF;
     padding: 0;font-family: 'Dancing Script';
     transition:all .2s linear;
 }
-.stop-scrol{
+/*.stop-scrol{
     overflow: hidden;
     height: 100%;
-}
+}*/
 
 .banner{
     position: relative;
@@ -25,6 +25,7 @@ $color5: #FFF;
     background-image: url(../img/foto-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     .layer-1::before{
         content: '';
         position: absolute;
